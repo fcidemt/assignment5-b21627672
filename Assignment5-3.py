@@ -31,7 +31,8 @@ def binary_search(aim, list_arg):
         return 0
     else:
         mid_point = len(list_arg) // 2
-        if mid_point == aim:
+        if list_arg[mid_point] == aim:
+            output_file.write("\n")
             output_file.write(aim)
             return 0
         first_list = list_arg[:mid_point]
@@ -57,7 +58,7 @@ if statement is True:
     output_file.write("\n\nThe search string is ")
     output_file.write(searching_value)
     output_file.write(" and the city is ")
-    output_file.write(student_city_dict[searching_value][0])
+    output_file.write(student_city_dict[searching_value])
 else:
     output_file.write("\n\nThe search string was not found in file")
 
