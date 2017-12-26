@@ -32,14 +32,14 @@ def binary_search(aim, list_arg):
     elif len(list_arg) == 1 and list_arg[0] != aim:
         return 0
     else:
-        mid_point = len(list_arg) // 2
+        mid_point = (len(list_arg) - 1) // 2
         if list_arg[mid_point] == aim:
             output_file.write("\n")
             output_file.write(aim)
             print(aim)
             return 0
         first_list = list_arg[:mid_point]
-        second_list = list_arg[mid_point:]
+        second_list = list_arg[mid_point + 1:]
         if aim < second_list[0]:
             if len(first_list) == 1 and first_list[0] != aim:
                 statement = False
