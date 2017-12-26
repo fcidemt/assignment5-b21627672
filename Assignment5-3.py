@@ -5,6 +5,11 @@ searching_value = sys.argv[2]
 students_file = open(text_file, "r")
 output_file = open("output.txt", "w")
 
+print("Searching value is:", searching_value, "\n")
+output_file.write("Searching value is: ")
+output_file.write(searching_value)
+output_file.write("\n\n")
+
 student_city_list = [line.strip().split(":") for line in students_file]
 student_city_dict = {item[0]:item[1] for item in student_city_list}
 student_list = [student[0] for student in student_city_list]
@@ -30,6 +35,9 @@ def binary_search(aim, list_arg):
     if len(list_arg) == 1 and list_arg[0] == aim:
         return 0
     elif len(list_arg) == 1 and list_arg[0] != aim:
+        return 0
+    elif len(list_arg) == 0:
+        statement = False
         return 0
     else:
         mid_point = (len(list_arg) - 1) // 2
