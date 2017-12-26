@@ -1,3 +1,6 @@
+
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 diabetes_file = open("diabetes.data", "r")
@@ -26,8 +29,7 @@ def plot1():
             min_p_index = copy_pregnancy_age.index(i)
     max_p_age = int(dbp90_age_list[max_p_index][7])
     min_p_age = int(dbp90_age_list[min_p_index][7])
-    print(min_p_index)
-    print(min_p_age)
+
     for j in copy_bodyMass_age:
         if j == max_bodyMass_age:
             max_b_index = copy_bodyMass_age.index(j)
